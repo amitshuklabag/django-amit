@@ -2,7 +2,8 @@ config:
   runTime: "Python"
   version: ""
   framework: "Django"
-  buildCommand: "pip install -r requirements.txt"
+  installCommand: "pip install -r requirements.txt"
+  buildCommand: ""
   buildDir: "./"
   runCommand: "python manage.py runserver 0.0.0.0:8000"
 ports:
