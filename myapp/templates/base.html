@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Basic -->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <!-- Site Metas -->
+    <title>Elestio django example</title>
+    <meta name="description" content="" />
+    
+    <link rel="icon" type="image/png" href="{% static 'myapp/images/favicon.png' %}">
+
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}" />
+  </head>
+
+  <body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+
+    <!-- Main content -->
+    <header class="app-header">
+      <img src="{% static 'myapp/images/elestio-logo.svg' %}" alt="logo" />
+    </header>
+
+
+
+    <div class="app-body">
+      <div class="app-heading" style="margin-bottom: 40px;">
+        <h1>Welcome to Elestio - Django</h1>
+        <h4>Deploy your apps quickly with the easiest CI/CD system</h2>
+      </div>
+
+      <p class="app-info-block">
+        This Host <strong class="subVal" id="host">{{ ip.ip }}</strong>
+      </p>
+
+      <p class="app-info-block">
+        Your IP <strong class="subVal" id="yourIP">{{ clientip }}</strong>
+      </p>      
+
+      <div class="app-deploy">
+        <a href="https://dash.elest.io/" class="btn mb-10-m btn-try"
+          >Deploy on Elestio
+        </a>
+      </div>
+    </div>
+
+    <!-- BG Anim -->
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+  </body>
+</html>

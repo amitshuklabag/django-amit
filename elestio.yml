@@ -1,0 +1,22 @@
+config:
+  runTime: "Python"
+  version: ""
+  framework: "Django"
+  buildCommand: "pip install -r requirements.txt"
+  buildDir: "./"
+  runCommand: "python manage.py runserver 0.0.0.0:8000"
+ports:
+  - protocol: "HTTPS"
+    targetProtocol: "HTTP"
+    listeningPort: "443"
+    targetPort: "8000"
+    public: true
+    path: "/"
+    isAuth: false
+    login: ""
+    password: ""
+exposedPorts:
+  - protocol: "HTTP"
+    hostPort: "8000"
+    containerPort: "8000"
+    interface: "172.17.0.1"
